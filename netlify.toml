@@ -1,0 +1,11 @@
+# Netlify 배포 설정 (이 파일은 프로젝트 맨 위에 있어야 합니다)
+[build]
+  publish = "site"
+  command = "node site/build-site.mjs"
+
+# 사이트를 만드는 파일은 인터넷에 공개하지 않습니다
+[[redirects]]
+  from = "/build-site.mjs"
+  to = "/404.html"
+  status = 404
+  force = true
